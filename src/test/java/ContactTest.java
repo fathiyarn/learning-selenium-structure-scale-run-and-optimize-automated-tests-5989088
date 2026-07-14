@@ -20,18 +20,6 @@ public class ContactTest extends BaseTest {
 	public void testContactFormSubmit() throws Exception {
 		driver.get("https://practicesoftwaretesting.com/contact");
 
-		System.out.println(driver.getCurrentUrl());
-		System.out.println(driver.getTitle());
-		
-		Thread.sleep(5000);
-		
-		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		Files.copy(
-		    screenshot.toPath(),
-		    Path.of("contact.png"),
-		    StandardCopyOption.REPLACE_EXISTING
-		);
-
 		ContactPage contactPagePom = new ContactPage(driver);
 
 		//FillForm
