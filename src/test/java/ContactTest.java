@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ContactTest extends BaseTest {
 	@Test
-	public void testContactFormSubmit throws Exception() {
+	public void testContactFormSubmit() throws Exception {
 		driver.get("https://practicesoftwaretesting.com/contact");
 
 		System.out.println(driver.getCurrentUrl());
