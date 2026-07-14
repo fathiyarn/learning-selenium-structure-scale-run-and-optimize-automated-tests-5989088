@@ -24,12 +24,10 @@ public class ContactTest extends BaseTest {
 
 		// Add explicit wait for the success alert to appear
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-		WebElement alert = wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameLoc)).sendKeys("John");
 		
-		// WebElement alert = wait.until(
-		// 	ExpectedConditions.visibilityOfElementLocated(contactPagePom.alertLoc)
-		// );
+		WebElement alert = wait.until(
+			ExpectedConditions.visibilityOfElementLocated(contactPagePom.alertLoc)
+		);
 		String alertText = alert.getText().trim();
 
 		assertEquals("Thanks for your message! We will contact you shortly.", alertText);
