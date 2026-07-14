@@ -39,3 +39,10 @@ jobs:
 
             - name: Run tests
               run: mvn test
+              
+            - name: Upload screenshot
+              if: always()
+              uses: action/upload-artifact@v4
+              with:
+                name: screenshots
+                path: "*.png"
