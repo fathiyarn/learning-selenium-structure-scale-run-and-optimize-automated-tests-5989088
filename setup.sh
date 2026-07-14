@@ -14,6 +14,13 @@ unzip chrome-linux64.zip
 echo "🔗 Linking chrome binary to /usr/bin/google-chrome"
 sudo ln -sf "$PWD/chrome-linux64/chrome" /usr/bin/google-chrome
 
+echo "⬇️ Downloading ChromeDriver..."
+wget https://storage.googleapis.com/chrome-for-testing-public/138.0.7204.93/linux64/chromedriver-linux64.zip
+unzip chromedriver-linux64.zip
+
+sudo ln -sf "$PWD/chromedriver-linux64/chromedriver" /usr/bin/chromedriver
+sudo chmod +x /usr/bin/chromedriver
+
 echo "📦 Installing required libraries..."
 sudo apt update
 sudo apt install -y \
